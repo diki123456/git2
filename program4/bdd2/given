@@ -1,0 +1,27 @@
+Scenario: Login test di website
+Given User telah memasukkan username dan password
+When User mengklik tombol "masuk"
+Then Sistem akan melakukan validasi username dan password
+And Sistem akan menampilkan halaman utama jika login berhasil
+And Sistem akan menampilkan pesan error jika login gagal
+
+
+Scenario: User registers on website
+Given a user is on the website’s registration page
+When they enter their username, password, email address and other required information and click the “Submit” button 
+Then the website will validate that the information is correct and valid
+And the user will be registered and be able to access the website’s services
+
+
+Scenario: Login berhasil
+
+Given User memasukkan username dan password
+When User menekan tombol "Login"
+Then User berhasil login dan dapat mengakses halaman Home
+
+
+Scenario: Login gagal
+
+Given User memasukkan username dan password yang salah
+When User menekan tombol "Login"
+Then User gagal login dan tidak dapat mengakses halaman Home
